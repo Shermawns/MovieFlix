@@ -2,8 +2,6 @@ package com.movieFlix.service;
 
 import com.movieFlix.entity.Category;
 import com.movieFlix.repository.CategoryRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
