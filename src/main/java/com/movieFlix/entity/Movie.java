@@ -40,7 +40,7 @@ public class Movie {
             joinColumns = @JoinColumn(name = "movie_id"),
             inverseJoinColumns = @JoinColumn(name = "category_id")
     )
-    private Set<Category> categories;
+    private List<Category> categories;
 
     @ManyToMany
     @JoinTable(
@@ -48,13 +48,13 @@ public class Movie {
             joinColumns = @JoinColumn(name = "movie_id"),
             inverseJoinColumns = @JoinColumn(name = "streaming_id")
     )
-    private Set<Streaming> streaming;
+    private List<Streaming> streaming;
 
 
     public Movie() {
     }
 
-    public Movie(Long id, String tittle, String description, LocalDate releaseDate, Double rating, LocalDateTime createdAt, LocalDateTime updateAt, Set<Category> categories, Set<Streaming> streaming) {
+    public Movie(Long id, String tittle, String description, LocalDate releaseDate, Double rating, LocalDateTime createdAt, LocalDateTime updateAt, List<Category> categories, List<Streaming> streaming) {
         this.id = id;
         this.tittle = tittle;
         this.description = description;
@@ -66,11 +66,11 @@ public class Movie {
         this.streaming = streaming;
     }
 
-    public Set<Category> getCategories() {
+    public List<Category> getCategories() {
         return categories;
     }
 
-    public Set<Streaming> getStreaming() {
+    public List<Streaming> getStreaming() {
         return streaming;
     }
 
